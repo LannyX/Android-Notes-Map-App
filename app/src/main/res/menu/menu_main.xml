@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <item
+        android:id="@+id/action_create_sample"
+        android:orderInCategory="100"
+        android:textColor="@android:color/primary_text_dark"
+        android:title="@string/create_sample_data"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_delete_all"
+        android:orderInCategory="101"
+        android:textColor="@color/colorlist_item_text"
+        android:title="@string/delete_all_notes"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/map"
+        android:icon="@drawable/ic_map"
+        android:orderInCategory="102"
+        android:title="Display map"
+        app:showAsAction="always"/>
+
+
+</menu>

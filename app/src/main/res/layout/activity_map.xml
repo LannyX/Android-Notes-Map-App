@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:paddingBottom="@dimen/m5"
+              android:paddingLeft="@dimen/m5"
+              android:paddingRight="@dimen/m5"
+              android:paddingTop="@dimen/activity_vertical_margin"
+              tools:context="edu.depaul.csc472.lanny.xul_final.activities.MapActivity">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/eT1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView1"
+            android:layout_toEndOf="@+id/textView1"
+            android:layout_toLeftOf="@+id/button1"
+            android:layout_toRightOf="@+id/textView1"
+            android:layout_toStartOf="@+id/button1"
+            android:ems="20"
+            android:hint="Enter a location to search"
+            android:inputType="textCapWords">
+
+            <requestFocus/>
+        </EditText>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView1"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:onClick="geoLocate"
+            android:text="Search"/>
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</LinearLayout>
